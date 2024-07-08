@@ -16,14 +16,26 @@ class Migration(migrations.Migration):
         migrations.AlterField(
             model_name='user',
             name='groups',
-            field=models.ManyToManyField(blank=True, help_text='The groups this user belongs to. A user will get all permissions granted to each of their groups.',
-                                         related_name='user_set', related_query_name='user', to='auth.Group', verbose_name='groups'),
+            field=models.ManyToManyField(
+                blank=True,
+                help_text='The groups this user belongs to.\
+                      A user will get all permissions granted\
+                         to each of their groups.',
+                related_name='user_set',
+                related_query_name='user',
+                to='auth.Group',
+                verbose_name='groups'
+                ),
         ),
         migrations.AlterField(
             model_name='user',
             name='is_superuser',
             field=models.BooleanField(
-                default=False, help_text='Designates that this user has all permissions without explicitly assigning them.', verbose_name='superuser status'),
+                default=False,
+                help_text='Designates that this user has \
+                  all permissions without explicitly assigning them.',
+                verbose_name='superuser status'
+                ),
         ),
         migrations.CreateModel(
             name='Recipe',
@@ -36,7 +48,9 @@ class Migration(migrations.Migration):
                 ('price', models.DecimalField(decimal_places=2, max_digits=5)),
                 ('link', models.CharField(blank=True, max_length=255)),
                 ('user', models.ForeignKey(
-                    on_delete=django.db.models.deletion.CASCADE, to=settings.AUTH_USER_MODEL)),
+                    on_delete=django.db.models.deletion.CASCADE,
+                    to=settings.AUTH_USER_MODEL
+                    )),
             ],
         ),
     ]
