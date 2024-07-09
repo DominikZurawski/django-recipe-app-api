@@ -20,7 +20,7 @@ cat ~/.ssh/id_ed25519.pub
 ```
 
 
-### Install and Configure Depdencies
+### Install and Configure Dependencies
 
 Use the below commands to configure the EC2 virtual machine running Amazon Linux 2.
 
