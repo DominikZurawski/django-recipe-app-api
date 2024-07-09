@@ -74,6 +74,13 @@ To start the service, run:
 
 ```sh
 docker-compose -f docker-compose-deploy.yml up -d
+curl -v http://127.0.0.1
+```
+
+If error: ```Error loading Python lib '/tmp/_MEIVkJq2x/libpython3.7m.so.1.0': dlopen: libcrypt.so.1: cannot open shared object file: No such file or directory```
+Install:
+```sh
+sudo yum install libxcrypt-compat
 ```
 
 ### Stopping Service
